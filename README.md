@@ -15,7 +15,7 @@ This project demonstrates a solid understanding of Object-Oriented Programming, 
 
 ## Screenshots
 
-<table> <tr> <td><img src="screenshots/add_student.png" alt="Add Student" width="400"/></td> <td><img src="screenshots/view_students.png" alt="View Students" width="400"/></td> </tr> </table>
+<table> <tr> <td><img src="Screenshot 1.png" alt="Add Student" width="400"/></td> <td><img src="Screenshot 2.png" alt="View Students" width="400"/></td> </tr> </table>
 
 ## Concepts Implemented
 
