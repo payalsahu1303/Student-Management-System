@@ -10,7 +10,8 @@ This project demonstrates a solid understanding of Object-Oriented Programming, 
 - View all students  
 - Update existing student details  
 - Delete student records  
-- Simple and user-friendly console interface  
+- Simple and user-friendly console interface
+- Persistent storage using file handling (student records are saved and loaded automatically between executions)
 
 
 ## Concepts Implemented
@@ -19,7 +20,8 @@ This project demonstrates a solid understanding of Object-Oriented Programming, 
 - CRUD Operations  
 - Java Collections Framework (ArrayList)  
 - Menu-driven program design  
-- User input handling using Scanner  
+- User input handling using Scanner
+- File Handling for persistent data storage
 
 
 ## Tech Stack
@@ -29,6 +31,7 @@ This project demonstrates a solid understanding of Object-Oriented Programming, 
 | Java | Core application development |
 | OOP | Data modeling and business logic |
 | ArrayList | In-memory data storage |
+| File I/O | Persistent storage of student records |
 | VS Code | Development environment |
 
 
@@ -85,7 +88,8 @@ This project strengthened practical understanding of:
 - Core Java and OOP principles  
 - Real-world CRUD application design  
 - Console-based application development  
-- Structured and modular programming  
+- Structured and modular programming
+- Implementing file handling for data persistence
 
 
 ## Developed By
