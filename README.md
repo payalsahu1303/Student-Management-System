@@ -13,6 +13,9 @@ This project demonstrates a solid understanding of Object-Oriented Programming, 
 - Simple and user-friendly console interface
 - Persistent storage using file handling (student records are saved and loaded automatically between executions)
 
+## Screenshots
+
+<table> <tr> <td><img src="screenshots/add_student.png" alt="Add Student" width="400"/></td> <td><img src="screenshots/view_students.png" alt="View Students" width="400"/></td> </tr> </table>
 
 ## Concepts Implemented
 
