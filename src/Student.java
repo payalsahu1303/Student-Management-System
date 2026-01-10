@@ -1,4 +1,5 @@
 public class Student {
+
     private int id;
     private String name;
     private int age;
@@ -39,6 +40,7 @@ public class Student {
         this.course = course;
     }
 
+    @Override
     public String toString() {
         return id + " | " + name + " | " + age + " | " + course;
     }
