@@ -3,24 +3,27 @@ import java.util.ArrayList;
 
 public class StudentService {
 
-    private ArrayList<Student> students = new ArrayList<>();
-    private final String FILE_NAME = "students.txt";
+    private final ArrayList<Student> students = new ArrayList<>();
+    private final String FILE_NAME = "src/students.txt";
 
     public StudentService() {
         loadFromFile();
     }
 
-    public void addStudent(Student s) {
-        students.add(s);
+    public void addStudent(Student student) {
+        students.add(student);
         saveToFile();
-        System.out.println("Student added successfully!");
+        System.out.println("Student added successfully.");
     }
 
     public void viewAllStudents() {
         if (students.isEmpty()) {
-            System.out.println("No students found.");
+            System.out.println("No student records available.");
             return;
         }
+
+        System.out.println("\nID | Name | Age | Course");
+        System.out.println("---------------------------");
         for (Student s : students) {
             System.out.println(s);
         }
@@ -33,7 +36,7 @@ public class StudentService {
                 s.setAge(age);
                 s.setCourse(course);
                 saveToFile();
-                System.out.println("Student updated!");
+                System.out.println("Student record updated.");
                 return;
             }
         }
@@ -41,19 +44,24 @@ public class StudentService {
     }
 
     public void deleteStudent(int id) {
-        students.removeIf(s -> s.getId() == id);
-        saveToFile();
-        System.out.println("Student deleted (if existed).");
+        boolean removed = students.removeIf(s -> s.getId() == id);
+
+        if (removed) {
+            saveToFile();
+            System.out.println("Student record deleted.");
+        } else {
+            System.out.println("Student not found.");
+        }
     }
 
     private void saveToFile() {
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter(FILE_NAME))) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_NAME))) {
             for (Student s : students) {
-                bw.write(s.getId() + "," + s.getName() + "," + s.getAge() + "," + s.getCourse());
-                bw.newLine();
+                writer.write(s.getId() + "," + s.getName() + "," + s.getAge() + "," + s.getCourse());
+                writer.newLine();
             }
         } catch (IOException e) {
-            System.out.println("Error saving data.");
+            System.out.println("Error while saving student data.");
         }
     }
 
@@ -62,10 +70,12 @@ public class StudentService {
         if (!file.exists())
             return;
 
-        try (BufferedReader br = new BufferedReader(new FileReader(FILE_NAME))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(FILE_NAME))) {
             String line;
-            while ((line = br.readLine()) != null) {
+
+            while ((line = reader.readLine()) != null) {
                 String[] data = line.split(",");
+
                 students.add(new Student(
                         Integer.parseInt(data[0]),
                         data[1],
@@ -73,7 +83,7 @@ public class StudentService {
                         data[3]));
             }
         } catch (IOException e) {
-            System.out.println("Error loading data.");
+            System.out.println("Error while loading student data.");
         }
     }
 }
