@@ -1,1 +1,12 @@
 101,Neha Sharma,20,AI
+102,Rohit Patil,20,CSE
+103,Aditi Verma,21,IT
+104,Varun Singh,22,ECE
+105,Anjali Gupta,20,AI
+106,Arjun Mehta,23,CSE
+107,Priya Reddy,21,AI
+108,Rahul Kumar,22,IT
+109,Sneha Joshi,20,CSE
+110,Vikram Das,23,ECE
+111,Kavya Nair,21,AI
+112,Manish Yadav,22,IT
